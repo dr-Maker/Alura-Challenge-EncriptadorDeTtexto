@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --txt-input: 32px ;
+    --txt-button:16px;
+    --color-primario:darkblue;
+}
+
+.contenido{
+    height: calc(100vh-80px);
+    width : calc(100vw-80px);
+    /*border: 2px solid black ;*/
+    margin: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenido__contenedorMain{
+    width: 56%;
+}
+
+.contenido__contenedorMain__contenedorInput{
+    height: 420px;
+    width: 680px;
+    /*border: 2px solid green ;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido__contenedorMain__input{
+    margin-top: 128px;
+    border: 0;
+    font-size: var(--txt-input);
+}
+input::placeholder{
+    font-size: var(--txt-input);
+    color: var(--color-primario);
+}
+
+.contenido__contenedorMain__restricciones{
+display: flex;
+
+}
+
+.contenido__contenedorMain__botones{
+
+    width: 680px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenido__contenedorMain__botones button{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: var(--txt-button);
+}
+
+.contenido__contenedorMain__botones__btnEncriptar{
+   color: white;
+   background-color: var(--color-primario);
+}
+
+.contenido__contenedorMain__botones__btnDesencriptar{
+    background-color: #D8DFE8;
+    color: var(--color-primario);
+}
+
+.contenido__contenedorAside{
+width: 30%;
+/*border: 2px solid red ;*/
+
+}
+
+.contenido__contenedorAside__contenderImg{
+    display: flex;
+    justify-content: center;
+    margin: 110px auto ;
+}
+
+.contenido__contenedorAside__contenderImg img{
+    width: 50%;
+}
+
+.contenido__contenedorAside__contenedorTextos{
+
+    width: 100%;
+    text-align: center;
+}
