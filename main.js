@@ -27,8 +27,6 @@ var diccionario = [
         }
     ]
 
-
-
 function Encriptar(){
     var textoIngresado = document.getElementById('text').value;
     var largoTexto =textoIngresado.length;   
@@ -46,9 +44,12 @@ function Encriptar(){
             }
             contador++;
         }
-        console.log(TextoEncriptado);  
-}
 
+        RemoverEtiquetas();
+        AgregarEtiquetas(TextoEncriptado);
+        VaciaInput();        
+        //console.log(TextoEncriptado);  
+}
 
 function Desencriptar(){
     var textoIngresado = document.getElementById('text').value;   
@@ -56,5 +57,47 @@ function Desencriptar(){
     diccionario.forEach(item => {
         textoIngresado = textoIngresado.replaceAll(item.cifrado, item.decifrado);
     });
-    console.log(textoIngresado);
+    RemoverEtiquetas();
+    AgregarEtiquetas(textoIngresado);
+    VaciaInput();
+    //console.log(textoIngresado);
 }
+
+function RemoverEtiquetas(){
+    const Aside = document.getElementById('contenido__contenedorAside');
+    Aside.querySelectorAll('*').forEach(n => n.remove());
+
+}
+
+function AgregarEtiquetas(mensajeCifrado){
+    var divElement = document.createElement("div"); 
+    divElement.classList.add("contenido__contenedorAside__contendorTexto");
+    
+    var pElement = document.createElement("p");
+    pElement.classList.add("contenido__contenedorAside__Texto");
+    pElement.textContent =mensajeCifrado;
+
+    const Aside = document.getElementById('contenido__contenedorAside');
+    divElement.appendChild(pElement);
+    Aside.appendChild(divElement)
+
+    var divBtn = document.createElement("div");
+    var button = document.createElement("button");
+
+    button.onclick = function() {
+        navigator.clipboard.writeText(pElement.textContent);
+    };
+
+    button.textContent = "Copiar";
+    divBtn.appendChild(button)
+    Aside.appendChild(divBtn)
+}
+
+function VaciaInput(){
+     document.getElementById('text').value ="";
+}
+
+const textArea  = document.getElementById('text');
+textArea.addEventListener("input", e =>{
+    textArea.style.height = textArea.scrollHeight + 'px';
+});
