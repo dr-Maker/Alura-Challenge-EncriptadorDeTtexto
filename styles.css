@@ -1,11 +1,15 @@
+/*1 rem son 16 px*/
 
 :root{
-    --txt-input: 32px ;
-    --txt-button:16px;
+    --txt-input: 2rem ;
+    --txt-button:1rem;
     --color-primario:darkblue;
 
     --backgpound-color-primario:#E5E5E5 ;
     --backgpound-color-secundario: white ;
+    --viwport-table: 1000px;
+    --viwport-phone : 500px;
+
 }
 
 *{
@@ -16,8 +20,8 @@
 }
 
 .contenido{
-    height: calc(100vh-80px);
-    width : calc(100vw-80px);
+    height: calc(100vh-5rem);
+    width : calc(100vw-5rem);
     /*border: 2px solid black ;*/
     margin: 40px;
     display: flex;
@@ -38,7 +42,7 @@
 }
 
 .contenido__contenedorMain__input{
-    margin-top: 128px;
+    margin-top: 8rem;
     border: none;
     font-size: var(--txt-input);
     color: var(--color-primario);
@@ -88,7 +92,7 @@ display: flex;
 .contenido__contenedorAside{
 width: 30%;
 background-color: var(--backgpound-color-secundario);
-border: 2px solid red ;
+border: 0,125rem solid red ;
 }
 
 .contenido__contenedorAside > *, .contenido__contenedorAside__contenedorTextos > * 
@@ -121,6 +125,18 @@ border: 2px solid red ;
     text-align: center;
 }
 
+@media (max-width: var(--viwport-table)){
+
+    .contenido{
+        flex-direction:column ;
+    }
+}
 
 
+@media (max-width: var(--viwport-phone)){
+
+    .contenido{
+        flex-direction:column ;
+    }
+}
 
