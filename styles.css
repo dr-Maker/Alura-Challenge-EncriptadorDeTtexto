@@ -7,6 +7,7 @@
 
     --backgpound-color-primario:#E5E5E5 ;
     --backgpound-color-secundario: white ;
+
     --viwport-table: 1000px;
     --viwport-phone : 500px;
 
@@ -127,9 +128,13 @@ border: 0,125rem solid red ;
 
 @media (max-width: var(--viwport-table)){
 
+    *{
+        background-color: red;
+    }
     .contenido{
         flex-direction:column ;
     }
+    
 }
 
 
