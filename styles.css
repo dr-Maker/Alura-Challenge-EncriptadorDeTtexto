@@ -110,7 +110,9 @@ flex-direction: column;
 justify-content: space-around;
 background-color: var(--backgpound-color-secundario);
 border-radius: 32px;
-
+-webkit-box-shadow: -1px 20px 34px -19px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 20px 34px -19px rgba(0,0,0,0.75);
+box-shadow: -1px 20px 34px -19px rgba(0,0,0,0.75);
 }
 
 .contenido__contenedorAside > *, .contenido__contenedorAside__contenedorTextos > * 
@@ -122,6 +124,7 @@ border-radius: 32px;
     display: flex;
     justify-content: center;
     margin: 110px auto ;
+    background-color: var(--backgpound-color-secundario);
 
 }
 
@@ -142,6 +145,7 @@ border-radius: 32px;
     font-weight: 800;
     margin-bottom: 1rem;
 
+
 }
 
 
@@ -157,7 +161,7 @@ border-radius: 32px;
 /*javaScript*/
 .contenido__contenedorAside__contendorTexto{
 
-    height: 70%;
+    height: 40%;
     background-color: var(--backgpound-color-secundario);
     border-radius: 32px;
 
@@ -169,6 +173,7 @@ border-radius: 32px;
     background-color: var(--backgpound-color-secundario);
     padding: 1rem;
     border-radius: 32px;
+    color: var(--color-primario);
 }
 
 .contenido__contenedorAside__contendorBtnCopiar{
@@ -193,20 +198,85 @@ border-radius: 32px;
 @media screen and (max-width: 1170px){
 
     .contenido{
+        width: 100%;
         flex-direction:column ;
+    }
+
+
+    .contenido__contenedorMain {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido__contenedorAside{
+        width: 70%;
+        margin-top: 9rem;
+
+    }
+    .contenido__contenedorMain__contenedorInput{
+        width: 100%;
+    } 
+    .contenido__contenedorMain__botones{
+        width: 100%;
+    }
+
+    .contenido__contenedorMain__botones button{ 
+        width: 48%
+    }
+    .contenido__contenedorAside__contendorTexto{
+        border-radius: 32px;
+    }
+
+    .contenido__contenedorAside__Texto{
+
+        margin-top: 1rem;
     }
 
     .contenido__contenedorAside__contenderImg{
         display: none;
     }
-    
-}
+    .contenido__contenedorAside__Texto_otro{
+        margin-bottom: 1rem;
+    }
 
+    .contenido__contenedorAside__contendorBtnCopiar{
+    margin: 0;
 
-@media screen and (max-width: 500px){
+    }
+    .contenido__contenedorAside__BtnCopiar{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 10%;
+        align-items: center;
+    }
 
-    .contenido{
-        flex-direction:column ;
+    .contenido__contenedorAside__contendorBtnCopiar{
+        margin-bottom: 1rem;
     }
 }
 
+
+@media screen and (max-width: 480px){
+
+        .contenido{
+        margin: 3rem;
+        width: 80%;
+        }
+    .contenido__contenedorMain__botones{
+        flex-direction: column;
+        }
+
+    .contenido__contenedorMain__botones button{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    .contenido{
+      width: 75%;
+    }
+
+}
