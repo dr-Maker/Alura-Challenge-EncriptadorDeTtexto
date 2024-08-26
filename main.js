@@ -74,7 +74,7 @@ function AgregarEtiquetas(mensajeCifrado){
     divElement.classList.add("contenido__contenedorAside__contendorTexto");
     
     var pElement = document.createElement("p");
-    pElement.classList.add("contenido__contenedorAside__Texto");
+    pElement.classList.add("contenido__contenedorAside__TextoFuncion");
     pElement.textContent =mensajeCifrado;
 
     const Aside = document.getElementById('contenido__contenedorAside');
@@ -82,7 +82,10 @@ function AgregarEtiquetas(mensajeCifrado){
     Aside.appendChild(divElement)
 
     var divBtn = document.createElement("div");
+    divBtn.classList.add("contenido__contenedorAside__contendorBtnCopiar");
+
     var button = document.createElement("button");
+    button.classList.add("contenido__contenedorAside__BtnCopiar");
 
     button.onclick = function() {
         navigator.clipboard.writeText(pElement.textContent);

@@ -90,6 +90,7 @@ display: flex;
     height: 4rem;
     border-radius: 24px;
     font-size: var(--txt-button);
+    border: 0.15rem solid var(--color-primario);
 }
 
 .contenido__contenedorMain__botones__btnEncriptar{
@@ -104,9 +105,12 @@ display: flex;
 
 .contenido__contenedorAside{
 width: 14rem;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 background-color: var(--backgpound-color-secundario);
 border-radius: 32px;
-border: 0,125rem solid red 
+
 }
 
 .contenido__contenedorAside > *, .contenido__contenedorAside__contenedorTextos > * 
@@ -127,9 +131,11 @@ border: 0,125rem solid red
 
 .contenido__contenedorAside__contenedorTextos{
     width: 100%;
+
   
 }
 .contenido__contenedorAside__Texto{
+    margin-top: -5rem;
     text-align: center;
     background-color: var(--backgpound-color-secundario);
     font-size: var(--txt-button);
@@ -138,10 +144,50 @@ border: 0,125rem solid red
 
 }
 
+
+
 .contenido__contenedorAside__Texto_otro{
     text-align: center;
     background-color: var(--backgpound-color-secundario);
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-between;
 }
+
+/*javaScript*/
+.contenido__contenedorAside__contendorTexto{
+
+    height: 70%;
+    background-color: var(--backgpound-color-secundario);
+    border-radius: 32px;
+
+}
+
+
+.contenido__contenedorAside__TextoFuncion{
+    margin-top: 1rem;
+    background-color: var(--backgpound-color-secundario);
+    padding: 1rem;
+    border-radius: 32px;
+}
+
+.contenido__contenedorAside__contendorBtnCopiar{
+    height: 0%;
+    margin: auto;
+
+}
+
+
+
+.contenido__contenedorAside__BtnCopiar{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 24px;
+    font-size: var(--txt-button);
+    border: 0.15rem solid var(--color-primario);
+    color: var(--color-primario);
+}
+
 
 
 @media screen and (max-width: 1170px){
